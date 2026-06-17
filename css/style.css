@@ -1,33 +1,20 @@
-/* ==========================================================================
-   CSS Variables & Theme
-   ========================================================================== */
 :root {
-    /* Colors */
     --bg-dark: #0a0a0f;
     --bg-card: rgba(255, 255, 255, 0.03);
     --bg-card-hover: rgba(255, 255, 255, 0.05);
     --text-main: #f3f4f6;
     --text-muted: #9ca3af;
     --border-color: rgba(255, 255, 255, 0.08);
-    
-    /* Accents & Gradients */
     --primary: #6366f1;
     --primary-hover: #4f46e5;
     --accent: #10b981;
     --gradient-1: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
     --gradient-2: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
-    
-    /* Typography */
     --font-main: 'Plus Jakarta Sans', sans-serif;
     --font-headings: 'Space Grotesk', sans-serif;
-    
-    /* Transitions */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ==========================================================================
-   Reset & Base Styles
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -69,9 +56,6 @@ ul {
     padding: 0 2rem;
 }
 
-/* ==========================================================================
-   Typography & Utilities
-   ========================================================================== */
 .gradient-text {
     background: var(--gradient-1);
     -webkit-background-clip: text;
@@ -87,9 +71,7 @@ ul {
     margin-top: 2rem;
 }
 
-/* ==========================================================================
-   Background Animations
-   ========================================================================== */
+/* Background blobs */
 .bg-blob {
     position: fixed;
     border-radius: 50%;
@@ -121,9 +103,7 @@ ul {
     100% { transform: translate(5%, 5%) scale(1.1); }
 }
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -185,9 +165,7 @@ ul {
     font-size: 1.125rem;
 }
 
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
+/* Navigation */
 .navbar {
     position: fixed;
     top: 0;
@@ -254,7 +232,6 @@ ul {
     width: 100%;
 }
 
-/* Dropdown styling */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -308,7 +285,6 @@ ul {
     transform: translateX(0) translateY(0);
 }
 
-/* Ensure padding bridge so menu doesn't disappear when moving cursor */
 .dropdown::after {
     content: '';
     position: absolute;
@@ -336,9 +312,7 @@ ul {
     transition: var(--transition);
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
+/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -410,33 +384,7 @@ ul {
     background: var(--bg-dark);
 }
 
-.floating-badge {
-    position: absolute;
-    background: rgba(10, 10, 15, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
-    padding: 0.75rem 1.25rem;
-    border-radius: 12px;
-    font-weight: 500;
-    font-size: 0.875rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.badge-1 {
-    top: 10%;
-    right: -10%;
-    animation: float 6s infinite alternate ease-in-out;
-}
-
-.badge-2 {
-    bottom: 15%;
-    left: -15%;
-    animation: float 7s infinite alternate-reverse ease-in-out;
-}
-
-/* ==========================================================================
-   Sections Structure
-   ========================================================================== */
+/* Sections */
 .section {
     padding: 6rem 0;
 }
@@ -457,9 +405,7 @@ ul {
     font-size: 1.125rem;
 }
 
-/* ==========================================================================
-   About & Skills
-   ========================================================================== */
+/* About & Skills */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -501,9 +447,7 @@ ul {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   Experience
-   ========================================================================== */
+/* Experience */
 .experience-list {
     display: flex;
     flex-direction: column;
@@ -559,9 +503,7 @@ ul {
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   Projects
-   ========================================================================== */
+/* Projects */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -646,9 +588,7 @@ ul {
     border-radius: 99px;
 }
 
-/* ==========================================================================
-   Contact
-   ========================================================================== */
+/* Contact */
 .contact-box {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -666,9 +606,7 @@ ul {
     margin: 0 auto 2rem auto;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* Footer */
 .footer {
     border-top: 1px solid var(--border-color);
     padding: 2rem 0;
@@ -692,9 +630,7 @@ ul {
     color: white;
 }
 
-/* ==========================================================================
-   Animations
-   ========================================================================== */
+/* Animations */
 .reveal {
     opacity: 0;
     transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
@@ -715,9 +651,7 @@ ul {
     transform: translateY(0);
 }
 
-/* ==========================================================================
-   Responsive Media Queries
-   ========================================================================== */
+/* Responsive */
 @media (max-width: 992px) {
     .hero-container, .about-grid {
         grid-template-columns: 1fr;
@@ -762,7 +696,6 @@ ul {
         display: flex;
     }
     
-    /* Hamburger Animation */
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -800,9 +733,7 @@ ul {
     }
 }
 
-/* ==========================================================================
-   Cursor Spotlight Glow
-   ========================================================================== */
+/* Spotlight */
 .cursor-glow {
     position: fixed;
     width: 600px;
@@ -818,13 +749,11 @@ ul {
 
 @media (max-width: 768px) {
     .cursor-glow {
-        display: none; /* Disable cursor glow on touch screens */
+        display: none;
     }
 }
 
-/* ==========================================================================
-   Stats Section
-   ========================================================================== */
+/* Stats */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -875,9 +804,7 @@ ul {
     }
 }
 
-/* ==========================================================================
-   Back To Top Progress Button
-   ========================================================================== */
+/* Back to Top */
 .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -910,7 +837,7 @@ ul {
 }
 
 .progress-ring__circle {
-    stroke-dasharray: 125.6; /* 2 * PI * r */
+    stroke-dasharray: 125.6;
     stroke-dashoffset: 125.6;
     transition: stroke-dashoffset 0.1s;
 }
@@ -926,9 +853,7 @@ ul {
     color: var(--primary);
 }
 
-/* ==========================================================================
-   Tooltips (Data-Tooltip Style)
-   ========================================================================== */
+/* Tooltips */
 [data-tooltip] {
     position: relative;
 }

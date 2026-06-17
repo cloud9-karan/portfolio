@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* ==========================================================================
-       Mobile Menu Toggle
-       ========================================================================== */
+    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-link');
@@ -12,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('no-scroll');
     });
 
-    // Close menu when clicking a link
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             mobileMenuBtn.classList.remove('active');
@@ -21,11 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ==========================================================================
-       Navbar Scroll Effect
-       ========================================================================== */
+    // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
-    
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -34,9 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* ==========================================================================
-       Cursor Spotlight Glow
-       ========================================================================== */
+    // Spotlight cursor glow
     const cursorGlow = document.getElementById('cursor-glow');
     if (cursorGlow) {
         document.addEventListener('mousemove', (e) => {
@@ -45,11 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ==========================================================================
-       Scroll Reveal Animation (Entry & Exit Viewport Transitions)
-       ========================================================================== */
+    // Scroll entry and exit animations
     const revealElements = document.querySelectorAll('.reveal');
-
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         const revealPoint = 80;
@@ -73,11 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Trigger once on load
+    revealOnScroll();
 
-    /* ==========================================================================
-       Back to Top Button with Scroll Progress
-       ========================================================================== */
+    // Back to top circular progress
     const backToTopBtn = document.getElementById('back-to-top');
     const progressCircle = document.querySelector('.progress-ring__circle');
     
@@ -95,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener('scroll', () => {
             const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-            // Prevent division by zero if page is not scrollable
             const scrollPercent = documentHeight > 0 ? (window.scrollY / documentHeight) * 100 : 0;
             
             if (window.scrollY > 300) {
@@ -112,14 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ==========================================================================
-       Active Navigation Link Update on Scroll
-       ========================================================================== */
+    // Active navigation highlighting
     const sections = document.querySelectorAll('section');
-
     window.addEventListener('scroll', () => {
         let current = '';
-
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
