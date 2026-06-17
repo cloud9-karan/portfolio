@@ -883,3 +883,63 @@ ul {
     opacity: 1;
     transform: translateX(-50%) translateY(0) scale(1);
 }
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+.form-status {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    transition: var(--transition);
+    min-height: 24px;
+}
+
+.form-status.success {
+    color: var(--accent);
+}
+
+.form-status.error {
+    color: #ef4444;
+}

@@ -117,4 +117,58 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Form submission
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm && formStatus) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    formStatus.classList.remove('error');
+                    formStatus.classList.add('success');
+                    formStatus.textContent = 'Message sent successfully!';
+                    contactForm.reset();
+                } else {
+                    console.log(response);
+                    formStatus.classList.remove('success');
+                    formStatus.classList.add('error');
+                    formStatus.textContent = json.message || 'Something went wrong.';
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                formStatus.classList.remove('success');
+                formStatus.classList.add('error');
+                formStatus.textContent = 'Network error. Please try again.';
+            })
+            .then(() => {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                    formStatus.className = 'form-status';
+                }, 5000);
+            });
+        });
+    }
 });
