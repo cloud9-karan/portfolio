@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan Yadav | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Karan Yadav, a creative Software Engineer.">
+    
+    <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Background Animated Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Karan<span class="accent">.</span></a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="dropdown-content">
+                        <a href="#about" data-tooltip="Warning: Element escaping gravitational bounds.">My Story</a>
+                        <a href="#experience" data-tooltip="Click to toggle local mass matrix.">Experience</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <div class="dropdown-content">
+                        <a href="#skills" data-tooltip="Drag to distort global warp space.">Frontend</a>
+                        <a href="#skills" data-tooltip="Orbit threshold exceeded. Proceed with care.">Backend</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="#projects" data-tooltip="Warning: Subject to orbit.">Web Apps</a>
+                        <a href="#projects" data-tooltip="Escape velocity achieved.">Mobile Apps</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#contact" class="btn btn-outline dropdown-btn">Let's Talk</a>
+                    <div class="dropdown-content dropdown-contact">
+                        <a href="mailto:kyengx@gmail.com" data-tooltip="Establish orbit connection.">Email Me</a>
+                        <a href="https://linkedin.com" target="_blank" data-tooltip="Open external transmission.">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <span class="badge">Available for Work</span>
+                    <h1 class="hero-title">
+                        Engineering websites <br />
+                        that feel <span class="gradient-text">effortlessly light.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Hi, I'm <strong class="text-white">Karan Yadav</strong>. I'm a frontend developer who focuses on building fast, interactive, and clean web experiences. By keeping code structured and layouts lightweight, I make sure digital products run smoothly on any device.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="https://github.com" target="_blank" class="btn btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="btn btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal">
+                    <div class="hero-image-card">
+                        <img src="img/profile.png" alt="Karan Yadav" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <p class="section-desc">Get to know more about my background and technical skills.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>Hey there! I'm Karan. I'm a developer who genuinely loves building things that live on the web. My journey into coding started out of pure curiosity, and it quickly grew into a full-blown passion for crafting digital experiences.</p>
+                        <p>Recently, I had an incredible opportunity to intern at Pearce Corp under CBRE. During my time there, I dove deep into real-world engineering challenges, collaborated with some brilliant minds, and really honed my skills in delivering high-quality, impactful software. These days, my main focus is on building accessible, inclusive, and highly performant applications.</p>
+                        <a href="#contact" class="btn btn-outline mt-4">Download Resume</a>
+                    </div>
+                    <div class="skills-wrapper reveal">
+                        <h3 class="skills-title">Technologies & Skills:</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">JavaScript (ES6+)</div>
+                            <div class="skill-item">React & Redux</div>
+                            <div class="skill-item">Node.js & Express</div>
+                            <div class="skill-item">TypeScript</div>
+                            <div class="skill-item">HTML & CSS</div>
+                            <div class="skill-item">Tailwind CSS</div>
+                            <div class="skill-item">PostgreSQL</div>
+                            <div class="skill-item">Git & GitHub</div>
+                            <div class="skill-item">GIS Engineering</div>
+                            <div class="skill-item">AutoCAD</div>
+                            <div class="skill-item">VMware Operations</div>
+                            <div class="skill-item">Telecom Data Handling</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats / Highlights Grid -->
+                <div class="stats-grid reveal mt-4">
+                    <div class="stat-item">
+                        <div class="stat-num gradient-text">1+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num gradient-text">10+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num gradient-text">5+</div>
+                        <div class="stat-label">Technologies Mastered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num gradient-text">100%</div>
+                        <div class="stat-label">Commitment</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                    <p class="section-desc">My professional journey so far.</p>
+                </div>
+                
+                <div class="experience-list">
+                    <div class="experience-item reveal">
+                        <div class="experience-header">
+                            <h3 class="experience-role">Software Engineering Intern</h3>
+                            <span class="experience-date">Recent</span>
+                        </div>
+                        <div class="experience-company">Pearce Corp (under CBRE)</div>
+                        <p class="experience-desc">Worked on real-world engineering challenges, collaborated with a brilliant team, and honed skills in delivering high-quality, impactful software applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
+                    <p class="section-desc">Some of the recent projects I've built and shipped.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Project 1" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="#" class="btn btn-outline btn-sm">Source Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">E-Commerce Dashboard</h3>
+                            <p class="project-desc">The legacy e-commerce dashboard was anchored by bloated backend requests and rigid, blocking tables that dragged down mobile conversion rates. I introduced a decoupled rendering architecture powered by React, shifting the data processing load to asynchronous matrices to achieve fluid, real-time analytics updates.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal" style="transition-delay: 100ms;">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=800&auto=format&fit=crop" alt="Project 2" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="#" class="btn btn-outline btn-sm">Source Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">AI Content Generator</h3>
+                            <p class="project-desc">Traditional AI prompt interfaces are plagued by high-latency API roundtrips and rigid layout architectures that fragment the user's flow. I deployed Next.js and Supabase streams to dynamically throttle and animate data packets, creating a weightless content streaming pipeline that boosted completion rates by 34%.</p>
+                            <div class="project-tech">
+                                <span>Next.js</span>
+                                <span>OpenAI API</span>
+                                <span>Tailwind</span>
+                                <span>Supabase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal" style="transition-delay: 200ms;">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Project 3" class="project-img">
+                            <div class="project-overlay">
+                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+                                <a href="#" class="btn btn-outline btn-sm">Source Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Fintech Landing Page</h3>
+                            <p class="project-desc">Standard financial applications suffer from heavy, high-friction landing pages that fail to capture user attention. I designed a physics-based landing page using GSAP and custom bezier paths, decoupling scrolling motion from default window physics to achieve seamless 120Hz smooth scrolling.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS/SCSS</span>
+                                <span>Vanilla JS</span>
+                                <span>GSAP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-box reveal">
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <p class="contact-desc">Currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <a href="mailto:kyengx@gmail.com" class="btn btn-primary btn-lg mt-4">Say Hello</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2024 Karan Yadav. Built with HTML, CSS, and JS.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg class="progress-ring" width="48" height="48">
+            <circle class="progress-ring__circle" stroke="var(--primary)" stroke-width="3" fill="transparent" r="20" cx="24" cy="24"/>
+        </svg>
+        <span class="arrow">↑</span>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
