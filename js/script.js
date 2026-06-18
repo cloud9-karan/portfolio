@@ -126,6 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Honeypot check for bots
+            if (contactForm.querySelector('input[name="botcheck"]').checked) {
+                return;
+            }
+            
             const formData = new FormData(contactForm);
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.textContent;

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karan Yadav | Portfolio</title>
     <meta name="description" content="Personal portfolio of Karan Yadav, a creative Software Engineer.">
+    <!-- Google Fonts: Syne & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
 
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#home" class="logo">Karan<span class="accent">.</span></a>
+            <a href="#home" class="logo">Karan Yadav<span class="accent">.</span></a>
             <div class="nav-links">
                 <div class="dropdown">
                     <a href="#about" class="nav-link">About</a>
@@ -236,8 +237,11 @@
                     <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
                     <p class="contact-desc">Whether you have a question, want to collaborate, or just want to say hi, my inbox is open.</p>
                     
-                    <form id="contact-form" class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form">
                         <input type="hidden" name="access_key" value="caacbecc-933c-4924-9879-56a879a2e9dc">
+                        
+                        <!-- Anti-spam Honeypot -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
                         
                         <div class="form-group">
                             <input type="text" name="name" required placeholder="Your Name">
@@ -249,7 +253,7 @@
                             <textarea name="message" required placeholder="Your Message" rows="5"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-lg">Launch Message</button>
                         
                         <div id="form-status" class="form-status"></div>
                     </form>
